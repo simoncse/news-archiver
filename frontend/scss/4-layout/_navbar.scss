@@ -1,0 +1,100 @@
+%useflex {
+    display:flex;
+    align-items: center;
+}
+
+nav {
+    @extend %useflex;
+
+    padding: 1.5rem 1rem 1.1rem;
+    overflow: hidden;
+    box-shadow: $base-box-shadow;
+
+    .container{
+        display:flex;
+        align-items:flex-start;
+        flex-wrap: wrap;
+
+        @include md{
+            align-items: center;
+            flex-wrap:nowrap;
+        }
+    }
+}
+
+.logo{
+    flex:1 0 100%;
+    padding-bottom: 0.9rem;
+    @extend %useflex;
+    color:darken($primary,10%);
+
+    @include md {
+        padding-bottom: 0rem;
+        max-width:145px;
+        justify-content: center;
+    }
+
+    img {
+        width: 200px * 0.75;
+        height:100px * 0.75;
+    }
+}
+
+.burger {
+    margin-left:auto;
+    width:1.8rem;
+    color:$primary;
+    cursor: pointer;
+
+    @include md {
+        display:none;
+    }
+
+    svg {
+        pointer-events: none;
+    }
+}
+
+.site-links{
+    display:none;
+    flex:1 0 100%;
+    margin-bottom: 0.6rem;
+    text-align:right;
+
+    &--show {
+        display:block;
+        
+
+    }
+
+    @include md {
+        text-align: left;
+        flex: 1 0 auto;
+        max-width: 39%;
+
+        display:block;
+        margin-bottom: 0;
+
+    }
+
+    @include lg {
+        flex: 1 0 auto;
+        max-width: 50%;
+    }
+
+    
+}
+
+
+.site-links li {
+    display:block;
+    padding: 0.4rem 0.5rem;
+    
+        @include lg {
+            display:inline-block;
+            padding:0.4rem 1.5rem;
+        }
+}
+
+
+

@@ -1,0 +1,116 @@
+
+//this will be a flexbox
+.archive__source {
+    padding:1rem;
+}
+
+.archive__content{
+    padding:1rem;
+    // justify-content: space-between;
+    align-items:center;
+    gap:2rem;
+}
+
+
+
+
+.archive__screenshot{
+    flex-grow: 1 0 auto;
+    // max-width:100%;
+    position: relative;
+    /* 
+    this makes sure that the photo can occupt the entire flex item not overflow.
+    if the photo is large enough, the flex property will force flexbox to wrap 
+    the next flex item in the next line.
+    
+    */
+
+    
+}
+
+.archive__screenshot img {
+
+    /* this will make sure the img will be responsive in respect to its parent (see above) */
+    width: 100%; 
+    height: auto;
+    /* border: 1px solid black; */
+
+    box-shadow: $base-box-shadow;
+    border: $border-low-profile;
+    border-radius: $soft-border-radius;
+}
+
+
+.links-group h3 {
+    @include changeSelectionText;
+    margin-bottom: 1rem;
+
+}
+
+.links-group {
+    align-self: flex-start;
+
+    flex:0 0 400px;
+    max-width: 100%;
+
+    font-size:0.8rem;
+
+    a {
+        @include changeSelectionText;
+        display:block;
+        margin-bottom: 0.2rem;
+        padding:0.2rem 0;
+
+        @include md{
+            margin-bottom: 0.35rem;
+            padding:0.35rem 0;
+        }
+
+        color:$primary;
+
+        &:hover,
+        &:active{
+            color:darken($primary, 10);
+        }
+    }
+    // display:flex;
+    // flex-direction: column;
+    // font-size: 0.8rem;
+
+
+}
+
+
+
+
+/* various screenshot size, see PHP : components/Archive::addCss method  */
+.resize-fox {
+    width:100%;
+    
+    @include sm{
+        padding: 2rem;
+    }
+
+    @include md{
+        width:60%;
+        padding: 2.5rem;
+    }
+
+    @include lg{
+        width:50%;
+    }
+}
+
+.resize-cnn {
+    width:100%;
+    padding:0rem;
+
+    @include sm{
+        padding: 0rem 2rem;
+    }
+
+    @include xl{
+        padding: 1rem 4rem;
+    }
+
+}

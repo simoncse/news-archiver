@@ -1,0 +1,129 @@
+$footer-txt:#ccc9c9;
+
+%flex-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    @extend %flex-center;
+    background-color:darken($primary, 20);
+    color:$footer-txt;
+    padding:1rem 1.1rem;
+
+}
+
+.footer__content{
+    width:80%;
+    // @include showBorder;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.footer__content > * {
+    border-bottom: 1.5px solid rgba($footer-txt,0.4);
+    padding: 1.1rem 1rem;
+
+    @include md {
+        border-bottom: none;
+    }
+}
+
+
+.footer__about {
+    flex-grow:1;
+    font-size:.8rem;
+
+    h3 {
+        margin-bottom: .7rem;
+    }
+
+    @include md {
+        max-width: 300px;
+    }
+
+}
+
+.contact__info {
+    margin-top:2rem;
+    @extend %flex-center;
+    justify-content: flex-start;
+
+
+    .svg__icon {
+        width:30px;
+        height:30px;
+        padding:0.3rem;
+        border-radius: 50%;
+        background: darken($primary, 15);
+        @extend %flex-center;
+    }
+
+    .email {
+        margin-left:1.8rem;
+        color:lighten($primary,50);
+    }
+}
+
+
+.footer__actions {
+    flex: 1 0 100%;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+
+    p {
+        font-size:0.8rem;
+    }
+    
+    @include md {
+        flex: 0 0 auto;
+        width: 20ch;
+        display:block;
+
+        p {
+            margin-bottom: 0.5rem;
+
+        }
+
+    }
+
+    
+    a {
+        background:darken($primary, 15);
+        padding:0.5rem;
+        width:35px;
+        height:35px;
+        cursor: pointer;
+        @extend %flex-center;
+    }
+    svg {
+        fill: $bg-cl;
+        pointer-events: none;
+    }
+}
+.footer__links {
+    flex: 1 0 100%;
+    text-align: center;
+    font-size:0.85rem;
+
+    @include lg {
+        flex: 0 0 auto;
+        width: 20ch;
+        text-align: left;
+    }
+    
+    li {
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color:$footer-txt;
+        
+        &:hover {
+            color:#eeeeee;
+        }
+    }
+}   

@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;
+}
+
+.nav-link {
+    color:$primary;
+    text-decoration: none;
+    padding-bottom: 0.2rem;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        width:0%;
+        height:1.7px;
+        background-color: darken($primary,10%);
+        @include trans(0.2s ease-out);
+    }
+
+    &:hover::after{
+        left:0;
+        width:100%;
+    }
+    
+}

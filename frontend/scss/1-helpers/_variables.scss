@@ -1,0 +1,33 @@
+// theme colors
+$primary: #273c69 !default;
+$secondary: #4c967a !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+$gray:#7d7e81 !default;
+$bg-cl:#fffffe !default;
+$text-cl:#1a1a1a !default;
+
+// color palette
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "black": black,
+  "white": white,
+) !default;
+
+
+// spacing
+$base-padding: 0.5rem !default;
+$base-margin: 0.75rem !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+$soft-border-radius:6px;
+$border-low-profile:1px solid #ecebeb;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1) !default;
+$soft-box-shadow: 1px 1px 2px rgba(0,0,0,0.1) !default;

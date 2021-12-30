@@ -1,0 +1,34 @@
+@mixin showBorder($cl:red){
+     border:2px dotted $cl;
+}
+
+@mixin changeSelectionText(){
+    &::selection{
+        color:cornsilk;
+        background-color: $primary;
+    }
+}
+
+@mixin trans($val...){
+    -webkit-transition: $val;
+    -moz-transition: $val;
+    -o-transition: $val;
+    transition: $val;
+}
+
+@mixin paragraph(){
+    h3 {
+        font-size:1.4rem;
+        color:$primary;
+    }
+
+    * + * {
+        margin:1em 0 0;
+        // background: red;
+    }
+
+    p {
+        color: #333333;
+        line-height: 1.5;
+    }   
+}

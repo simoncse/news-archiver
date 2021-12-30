@@ -1,0 +1,10 @@
+vendor
+node_modules
+.env
+
+dbconn.php
+sqlhistory.md
+
+
+##for docker config
+php/msmtprc

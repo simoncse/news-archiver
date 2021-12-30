@@ -1,0 +1,47 @@
+.btn {
+    display: inline-block;
+    padding:.84em 1.2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    border:none;
+    @include trans(300ms ease-out);
+}
+
+
+$off-wht: rgba(white, .4);
+
+@mixin btn-theme($btn-color){
+    color:$btn-color;
+    border: 0.13em solid $btn-color;
+    background-color: transparent;
+    box-shadow: $soft-box-shadow;
+    &:hover {
+        background-color: darken($btn-color, 6%);
+        border-color:transparent;
+        color:white;
+        box-shadow: $base-box-shadow;
+    };
+    &:active {
+        box-shadow: $base-box-shadow;
+    }  
+}
+
+@mixin btn-theme-fill($btn-color){
+    color:#f7f7f7;
+    background-color: $btn-color;
+    box-shadow: $soft-box-shadow;
+    &:hover {
+        background-color: darken($btn-color, 16%);
+        box-shadow: $base-box-shadow;
+    };
+    &:active {
+        box-shadow: $base-box-shadow;
+    }  
+}
+
+@mixin btn-disabled {
+    border: 1px solid transparent;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}

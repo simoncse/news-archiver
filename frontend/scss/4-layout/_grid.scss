@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+main{
+    min-height: 80%;
+}

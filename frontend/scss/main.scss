@@ -1,0 +1,31 @@
+// @import "~flatpickr/dist/flatpickr.min.css";
+// HELPERS
+@import '1-helpers/variables';
+@import '1-helpers/mixins';
+@import '1-helpers/breakpoints';
+
+//TOOLS
+
+//BASICS
+@import '3-basics/reset';
+@import '3-basics/base';
+@import '3-basics/colors';
+@import '3-basics/buttons';
+@import '3-basics/links';
+
+//LAYOUT
+@import '4-layout/grid';
+@import '4-layout/navbar';
+@import '4-layout/content';
+@import '4-layout/footer';
+
+//MODULES
+@import '5-modules/searchForm.scss';
+@import '5-modules/select.scss';
+@import '5-modules/datepicker';
+@import '5-modules/toast';
+
+//PAGES
+@import '6-pages/contact';
+@import '6-pages/dev';
+@import '6-pages/about';
