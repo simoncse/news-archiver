@@ -21,6 +21,13 @@ class ContextController extends Controller
     {
         $urlParams = $request->getBody();
 
+        $noParams = count($urlParams) == 1;
+        if($noParams){
+            throw new \InvalidArgumentException('Invalid Input', 400);
+            return false;
+            
+        }
+
         $context = Context::setDate($urlParams['date'], Cookie::get('timezone'));
 
         unset($context->earliestDate);

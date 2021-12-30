@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 //Change the endpoint if needed
-const API_ENDPOINT = "http://localhost/api";
+const API_ENDPOINT = "http://localhost:8080/api";
 
 // const sleep = ms => new Promise(
 //     resolve => setTimeout(resolve, ms));

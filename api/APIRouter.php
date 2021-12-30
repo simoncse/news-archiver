@@ -25,6 +25,7 @@ class APIRouter extends BaseRouter
         $callback = $this->routes[$method][$path] ?? false;
 
 
+
         if ($callback === false) {
             throw new \Exception('Unknown endpoint', 404);
             return false;

@@ -33,8 +33,10 @@ class SiteController extends Controller
         }
 
 
-
-
+        if(Application::$TIMEZONE == ""){
+            throw new \Exception("Cannot detected browser's timezone", 424);
+            return false;
+        }
         $context = Context::defaultDate(Application::$TIMEZONE);
         $params['context'] = $context;
 

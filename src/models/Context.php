@@ -45,6 +45,7 @@ class Context extends Model
             throw new \InvalidArgumentException('Invalid Input', 400);
             return false;
         }
+        
         return new Context($dateString, $timezone);
     }
 

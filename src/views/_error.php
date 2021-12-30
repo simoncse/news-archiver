@@ -11,7 +11,8 @@
 <body>
 <div class="error">
     <h3><?php echo $exception->getCode() ?> - <?php echo $exception->getMessage() ?></h3>
-<a href="/">Back to Home</a>
+    
+    <a href="/">Back to Home</a>
 
 </div>
 

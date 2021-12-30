@@ -1,9 +1,11 @@
 <?php
 
-// ini_set('display_errors', 1);
+ini_set('display_errors', 'Off');
+ini_set('log_errors', 'On');
+
 
 if (!isset($_COOKIE['timezone'])) {
-    echo "<html><head> <script src='/js/timezone.js'></script>";
+    echo "<html><head> <script src='/assets/timezone.js'></script>";
 }
 
 
@@ -15,7 +17,6 @@ use app\core\Application;
 require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
-
 
 
 $config = [

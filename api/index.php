@@ -2,7 +2,8 @@
 
 
 
-// ini_set('display_errors', 1);
+ini_set('display_errors', 'Off');
+ini_set('log_errors', 'On');
 
 use api\API;
 use app\controllers\ContextController;

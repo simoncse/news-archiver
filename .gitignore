@@ -5,6 +5,4 @@ node_modules
 dbconn.php
 sqlhistory.md
 
-
-##for docker config
 php/msmtprc

@@ -1,0 +1,26 @@
+#
+# Frontend (Compiling SASS and JS)
+#
+
+FROM node:14.9 as frontend
+
+WORKDIR /app
+
+COPY frontend/ ./
+
+RUN npm install
+
+RUN npm run production
+
+RUN ls .
+
+
+
+FROM nginx:latest
+
+WORKDIR var/www
+
+COPY --from=frontend /app/node_modules/ ./node_modules/
+COPY --from=frontend /app/static/js/ ./public/js/
+COPY --from=frontend /app/static/css/ ./public/css/
+
