@@ -6,13 +6,17 @@ FROM node:14.9 as frontend
 
 WORKDIR /app
 
-COPY frontend/ ./
+COPY frontend/package*.json ./
+COPY frontend/webpack.*.js ./
+COPY frontend/gulpfile.js ./
 
 RUN npm install
 
+COPY frontend/js ./js
+COPY frontend/scss ./scss
+
 RUN npm run production
 
-RUN ls .
 
 
 
