@@ -11,7 +11,7 @@ auth           on
 port           587
 from           name@gmail.com
 user           name@gmail.com
-password       yourpassword
+password       gmailapppassword
 
 
 # Set a default account

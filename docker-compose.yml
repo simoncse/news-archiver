@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./public/index.php:/var/www/public/index.php
       - ./public/assets:/var/www/public/assets
