@@ -7,3 +7,5 @@ sqlhistory.md
 php/msmtprc
 certbot
 dhparam
+
+ssl_renew.log
