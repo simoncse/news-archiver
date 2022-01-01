@@ -12,7 +12,7 @@ let earliestDate;
 let timeslots;
 //Load latest and earliest date from _info (echo from php)
 if (!Session.exists() || !window.location.search) {
-    console.log("not exists");
+    // console.log("Session not exists");
     latestDate = new Date(context.date);
     currentDate = new Date(context.date);
     earliestDate = new Date(context.earliestDate);
@@ -23,7 +23,7 @@ if (!Session.exists() || !window.location.search) {
     Session.setTimeslots(timeslots);
     Session.clearPreference();
 } else {
-    console.log("exists")
+    // console.log("Session exists")
     currentDate = new Date(Session.currentDate());
     latestDate = new Date(Session.latestDate());
     earliestDate = new Date(Session.earliestDate());

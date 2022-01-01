@@ -1,12 +1,14 @@
+const path = require('path');
 module.exports = {
     entry: {
-        burger: './frontend/js/burger.js',
-        index: './frontend/js/index.js'
+        burger: path.resolve(__dirname, 'js/burger.js'),
+        index: path.resolve(__dirname, 'js/index.js')
     },
     mode: 'development',
     devtool: 'inline-source-map',
     output: {
-        path: `${__dirname}/public/js`,
-        filename: '[name].js'
+        path: path.resolve(__dirname, './../public/js'),
+        filename: '[name].min.js'
     }
 }
+

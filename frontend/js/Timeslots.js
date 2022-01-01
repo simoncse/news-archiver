@@ -32,12 +32,11 @@ export function useTimeslots(selector, config) {
 
         display: (uid) => {
             if (!uid) return;
-            console.log(uid);
+            console.log("Found new entry.");
             el.value = uid;
         },
 
         onFocus: () => {
-            console.log(el.parentElement);
             el.parentElement.classList.add('select--focus');
 
             el.addEventListener('focus', function () {

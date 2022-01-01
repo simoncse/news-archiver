@@ -4,17 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch",
-    "production":"webpack --config webpack.prod.js && gulp"
+    "sass:watch": "sass scss:../public/css --watch --stop-on-error",
+    "sass:build": "sass scss:../public/css --no-source-map",
+    "js:build": "webpack --config webpack.prod.js",
+    "js:watch": "webpack --watch",
+    "production": "npm run js:build && npm run sass:build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.0.0",
     "sass": "^1.45.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"

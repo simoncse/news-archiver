@@ -1,8 +1,8 @@
 vendor
-node_modules
 .env
 
 dbconn.php
 sqlhistory.md
 
 php/msmtprc
+
