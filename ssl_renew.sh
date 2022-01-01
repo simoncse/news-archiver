@@ -1,5 +1,6 @@
 #!/bin/bash
-
+now=$(date)
+echo "$now"
 COMPOSE="/usr/local/bin/docker-compose --no-ansi"
 DOCKER="/usr/bin/docker"
 
