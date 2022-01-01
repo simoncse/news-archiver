@@ -13,9 +13,13 @@ class SiteController extends Controller
 {
 
 
-
+    
     public function home(Request $request)
     {
+        if(Application::$TIMEZONE == ""){
+            throw new \Exception("Cannot detected browser's timezone", 424);
+            return false;
+        }
 
         $urlParams = $request->getBody();
 
@@ -33,15 +37,14 @@ class SiteController extends Controller
         }
 
 
-        if(Application::$TIMEZONE == ""){
-            throw new \Exception("Cannot detected browser's timezone", 424);
-            return false;
-        }
+
         $context = Context::defaultDate(Application::$TIMEZONE);
         $params['context'] = $context;
-
+        
         $archive = new Archive($context->latest_entry());
         $params['archive'] = $archive;
+        
+
 
         return $this->render('home', $params);
     }

@@ -11,13 +11,11 @@ FROM node:14.9 as frontend
 
 
 USER node
-
+RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
 
-COPY package*.json ./
-COPY webpack.*.js ./
-
-
+COPY --chown=node:node package*.json ./
+COPY --chown=node:node webpack.*.js ./
 
 RUN npm install
 

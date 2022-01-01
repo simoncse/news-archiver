@@ -3,6 +3,10 @@
 ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 
+// echo '<div class="code"><pre>';
+// var_dump($_SERVER);
+// echo '</pre></div>';
+// exit;
 
 if (!isset($_COOKIE['timezone'])) {
     echo "<html><head> <script src='/assets/timezone.js'></script>";
