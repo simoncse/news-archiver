@@ -6,22 +6,22 @@ use app\core\Application;
 
 class Archive
 {
-    // public array $links = [];
-    // public string $screenshot_path = '';
 
     public function __construct($results)
     {
         // $this > renderLinks($results->contents);
     }
 
-    public static function begin($title)
+    public static function begin($title, $date)
     {
         echo sprintf(
             '<li class="archive">
-                    <h2 class="archive__source">%s</h2>
+                    <h2 class="archive__source">%s
+                    </h2>
+                    <span class="archive__date">%s</span>
                     <div class="archive__content row">
                     ',
-            $title
+            $title,$date
         );
     }
 

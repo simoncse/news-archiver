@@ -3,9 +3,14 @@
 
 use app\components\Archive;
 
+$timestamp = $archive->description->timestamp;
+
+$date = date("F j, Y, g:i a", strtotime($timestamp));
+
+
 foreach ($archive->resources as $resource) {
 
-    Archive::begin($resource->channel_name);
+    Archive::begin($resource->channel_name, $date);
     Archive::renderScreenshot($resource->screenshot_path, $resource->channel_id);
     Archive::renderLinks($resource->contents);
     Archive::end();

@@ -1,9 +1,6 @@
 
-//this will be a flexbox
-.archive__source {
-    padding:1rem;
-}
 
+//this will be a flexbox
 .archive__content{
     padding:1rem;
     // justify-content: space-between;
@@ -11,6 +8,15 @@
     gap:2rem;
 }
 
+
+.archive__source {
+    padding:1rem;
+}
+
+.archive__date {
+    padding: 0 1rem;
+    font-style: italic;
+}
 
 
 
