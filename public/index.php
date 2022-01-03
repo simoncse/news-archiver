@@ -3,10 +3,7 @@
 ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 
-// echo '<div class="code"><pre>';
-// var_dump($_SERVER);
-// echo '</pre></div>';
-// exit;
+
 
 if (!isset($_COOKIE['timezone'])) {
     echo "<html><head> <script src='/assets/timezone.js'></script>";
@@ -30,7 +27,7 @@ $config = [
         'password' => $_ENV['DB_PASSWORD'],
     ],
     'contact_email'=>$_ENV['CONTACT_EMAIL'],
-    'base_url' => "http://" . $_SERVER['HTTP_HOST']
+    'base_url' => $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['HTTP_HOST']
 ];
 
 $ROOT_DIR = dirname(__DIR__)."/src";
