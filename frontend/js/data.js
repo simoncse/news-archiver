@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 //Change the endpoint if needed
-const API_ENDPOINT = "http://" + location.hostname + "/api";
+const API_ENDPOINT = "https://" + location.hostname + "/api";
 
 // const sleep = ms => new Promise(
 //     resolve => setTimeout(resolve, ms));
