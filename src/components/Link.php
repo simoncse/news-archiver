@@ -9,9 +9,9 @@ class Link
     public static function render($url, $title)
     {
         return sprintf(
-            '<a href="%s" target=" _blank">
+            '<li><a href="%s" target=" _blank">
             %s
-            </a>',
+            </a></li>',
             $url,
             $title,
         );

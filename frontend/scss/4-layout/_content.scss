@@ -56,14 +56,15 @@
 .links-group {
     align-self: flex-start;
 
-    flex:0 0 400px;
+    flex:0 0 auto;
     max-width: 100%;
 
     font-size:0.8rem;
 
+
     a {
         @include changeSelectionText;
-        display:block;
+        display:inline-block;
         margin-bottom: 0.2rem;
         padding:0.2rem 0;
 

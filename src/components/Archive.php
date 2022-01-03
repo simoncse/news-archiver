@@ -35,14 +35,14 @@ class Archive
     public static function renderLinks($results)
     {
 
-        echo ' <div class="links-group">
+        echo ' <ul class="links-group">
                 <h3> Links:</h3>';
         foreach ($results as $result) {
 
             echo Link::render($result->url, $result->title);
         }
 
-        echo '</div>';
+        echo '</ul>';
     }
 
     public static function renderScreenshot($filename, $channel_id)
