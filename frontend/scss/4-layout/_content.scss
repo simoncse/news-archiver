@@ -1,4 +1,9 @@
 
+.archive {
+    //make sure enough room to display error when no archive is found.
+    min-height: 300px;
+}
+
 
 //this will be a flexbox
 .archive__content{
@@ -120,4 +125,14 @@
         padding: 1rem 4rem;
     }
 
+}
+
+.archive--none {
+    width:100%;
+    text-align:center;
+    padding:1.4rem;
+
+    h3 {
+        color:$primary;
+    }
 }

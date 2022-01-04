@@ -12,17 +12,29 @@ class Archive
         // $this > renderLinks($results->contents);
     }
 
-    public static function begin($title, $date)
+    public static function begin($title, $date, $valid=true)
     {
+        if($valid){
         echo sprintf(
             '<li class="archive">
                     <h2 class="archive__source">%s
                     </h2>
                     <span class="archive__date">%s</span>
                     <div class="archive__content row">
-                    ',
+            ',
             $title,$date
         );
+        }
+        else{
+        echo sprintf(
+                '<li class="archive">
+                        <h2 class="archive__source">%s
+                        </h2>
+                        <span class="archive__date">Unavailable at %s</span>
+                '
+                ,$title,$date
+        );
+        }
     }
 
     public static function end()
@@ -58,6 +70,13 @@ class Archive
         );
     }
 
+    public static function noResult($date){
+        echo sprintf('<div class="archive--none">
+        <h3>No record available at <i>%s</i>. Please choose a different time.</h3>
+        </div>',
+        $date);
+    }
+
     private static function addCSS($channel_id)
     {
         if ($channel_id == 1) {
@@ -68,4 +87,5 @@ class Archive
 
         return false;
     }
+
 }

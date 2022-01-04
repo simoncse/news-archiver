@@ -25,7 +25,13 @@ class Archive extends Model
 {
     public Description $description;
     public array $resources = [];
+    public array $missing = [];
     public static $all = [1,2];
+
+    private static $channels = [
+        'Fox News' => 1,
+        'CNN' => 2,
+    ];
 
 
     public function __construct(string $uid, array $channels=[])
@@ -53,9 +59,26 @@ class Archive extends Model
         }
 
         $this->description = new Description($jsonData->entry_uid, $jsonData->timestamp);
+        
         $this->resources = $jsonData->resources;
 
-        return $jsonData;
+  
+
+        $missing = $this->missingChannels($this->resources);
+
+    
+        if ( $missing != []) {
+            foreach($missing as $id){
+                $this->resources[] = (object) [
+                    'channel_id'=> $id,
+                    'channel_name'=>self::lookupChannel($id),
+                    'contents' => []
+                ];
+            };
+        }
+
+
+        
     }
 
     private function fetchArchiveByChannel(string $uid, array $channels){
@@ -77,9 +100,9 @@ class Archive extends Model
         $exec = $stmt->execute();
 
 
-        $rawData = $stmt->fetch(\PDO::FETCH_ASSOC);
 
-        
+        $rawData = $stmt->fetch(\PDO::FETCH_ASSOC);
+       
 
         $jsonData = json_decode($rawData['json']);
 
@@ -89,9 +112,12 @@ class Archive extends Model
         }
 
         $this->description = new Description($jsonData->entry_uid, $jsonData->timestamp);
-        $this->resources = $jsonData->resources;
+        
 
-        return $jsonData;
+    
+        $this->resources = $jsonData->resources ?? [];
+
+
     }
 
     private function pg_array($arr){
@@ -116,5 +142,22 @@ class Archive extends Model
         return true;
     }
 
+    private function missingChannels(array $resources){
+        $arr = [];
+        foreach($resources as $res){
+            $arr[] = $res->channel_id;
+        };
 
+        return array_diff(self::$all,$arr);
+        // return array_filter($resources, "$func"));
+    }
+
+    private static function lookupChannel($id){
+        if($id==1){
+            return 'Fox News';
+        }
+        if($id==2){
+            return 'CNN';
+        }
+    }
 }
