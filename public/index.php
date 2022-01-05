@@ -42,7 +42,7 @@ $app->router->get('/contact', [SiteController::class, 'contact']);
 $app->router->post('/contact', [SiteController::class, 'handleContact']);
 
 
-$app->router->get('/dev', [SiteController::class, 'dev']);
+$app->router->get('/development', [SiteController::class, 'dev']);
 $app->router->get('/about', [SiteController::class, 'about']);
 
 
