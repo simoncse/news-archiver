@@ -36,7 +36,7 @@
 
             
             <li>
-            <a href="/dev" class="nav-link">development</a>
+            <a href="/development" class="nav-link">development</a>
             </li>
             <li>
                 <a href="/contact" class="nav-link">contact</a>

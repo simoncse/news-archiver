@@ -6,8 +6,7 @@
             <h3>
                 About Flashback News
             </h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore deserunt distinctio eligendi, rerum
-                harum reprehenderit.</p>
+            <p>A news archiver that collects and displays news headlines from major U.S media such as Fox and CNN.</p>
 
             <div class="contact__info">
                 <div class="svg__icon">
@@ -29,21 +28,23 @@
             </a>
         </div>
 
-
-        <ul class="footer__links">
+        <div class="footer__links">
+        <ul class="footer__links--group">
             <li>
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="/">About</a>
+                <a href="/about">About</a>
             </li>
             <li>
-                <a href="/dev">Development</a>
+                <a href="/development">Development</a>
             </li>
             <li>
                 <a href="/contact">Contact</a>
             </li>
         </ul>
+        </div>
+
 
 
 

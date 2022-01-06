@@ -7,7 +7,7 @@
 
 //this will be a flexbox
 .archive__content{
-    padding:1rem;
+    padding:0.5rem;
     // justify-content: space-between;
     align-items:center;
     gap:2rem;
@@ -21,14 +21,21 @@
 .archive__date {
     padding: 0 1rem;
     font-style: italic;
+    font-size: 0.85rem;
+    display:block;
+    margin-bottom: 1rem;
+
+    
 }
 
 
 
 .archive__screenshot{
-    flex-grow: 1 0 auto;
+    flex-grow: 1 0 50%;
     // max-width:100%;
     position: relative;
+    display:flex;
+    justify-content: center;
     /* 
     this makes sure that the photo can occupt the entire flex item not overflow.
     if the photo is large enough, the flex property will force flexbox to wrap 
@@ -61,9 +68,10 @@
 .links-group {
     align-self: flex-start;
 
-    flex:0 0 auto;
+    flex:1 0 45%;
     max-width: 100%;
 
+    padding-left:1rem;
     font-size:0.8rem;
 
 
@@ -98,14 +106,15 @@
 /* various screenshot size, see PHP : components/Archive::addCss method  */
 .resize-fox {
     width:100%;
+    text-align: center;
     
     @include sm{
-        padding: 2rem;
+        padding: 0 4rem 0;
     }
 
     @include md{
-        width:60%;
-        padding: 2.5rem;
+        width:50%;
+        padding: 0 2.5rem 0;
     }
 
     @include lg{
@@ -118,12 +127,9 @@
     padding:0rem;
 
     @include sm{
-        padding: 0rem 2rem;
+        padding: 0 4rem 0;
     }
 
-    @include xl{
-        padding: 1rem 4rem;
-    }
 
 }
 

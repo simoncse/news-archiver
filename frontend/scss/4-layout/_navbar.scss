@@ -69,17 +69,21 @@ nav {
 
     @include md {
         text-align: left;
-        flex: 1 0 auto;
-        max-width: 39%;
+        flex: 1 0 20%;
+        max-width:40%;
+        padding:0 0.9rem;
 
-        display:block;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+
         margin-bottom: 0;
+        
 
     }
 
     @include lg {
-        flex: 1 0 auto;
-        max-width: 50%;
+       
     }
 
     
@@ -89,11 +93,13 @@ nav {
 .site-links li {
     display:block;
     padding: 0.4rem 0.5rem;
+    font-size:.95rem;
     
-        @include lg {
-            display:inline-block;
+        @include md {
             padding:0.4rem 1.5rem;
         }
+
+            
 }
 
 

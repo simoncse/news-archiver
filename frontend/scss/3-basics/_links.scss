@@ -25,3 +25,13 @@ a {
     }
     
 }
+
+.link {
+        text-decoration: underline;
+        color:$primary;
+
+        &:hover{
+            color:lighten($primary, 15);
+        }
+
+}

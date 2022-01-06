@@ -5,4 +5,24 @@
     padding: 2rem;
 
     @include paragraph;
+
+    p:last-child{
+        margin-bottom: 1em;
+    }
+
+
+    a {
+        @extend .link;
+    }
+
+}
+
+.flowchart-container {
+    width:100%;
+    padding:1.5rem;
+    text-align:center;
+
+    img {
+        width:80%;
+    }
 }

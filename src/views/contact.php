@@ -2,7 +2,7 @@
 <?php if(isset($sent) && $sent === true) :?>
     <div class="contact--success">
         <h3>Thank you! We'll be in touch.</h3>
-        <a href="/">Back to home</a>
+        <a href="/" class="link">Back to home</a>
     </div>
 <?php else: ?>
 

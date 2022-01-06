@@ -43,28 +43,10 @@
         <br>
         <br>
     <p>
-        If you have any questions, feel free to contact me <a href="/contact" target="_blank">here </a>. 
+        If you have any questions, feel free to contact me <a href="/contact" target="_blank">here</a>. 
         
         
 
     </p> 
 
 </div>
-
-<style>
-
-.flowchart-container {
-    width:100%;
-    padding:1.5rem;
-    text-align:center;
-}
-
-.flowchart-container img {
-    width:80%;
-}
-
-code {
-    font-family: monospace;
-}
-
-</style>
