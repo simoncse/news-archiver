@@ -6,7 +6,7 @@
             <h3>
                 About Flashback News
             </h3>
-            <p>A news archiver that collects and displays news headlines from major U.S media such as Fox and CNN.</p>
+            <p>A news archiver that collects and displays news headlines from major U.S media such as Fox News and CNN.</p>
 
             <div class="contact__info">
                 <div class="svg__icon">
